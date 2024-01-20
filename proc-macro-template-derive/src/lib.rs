@@ -5,7 +5,7 @@ use proc_macro::TokenStream;
 use proc_macro_error::proc_macro_error;
 
 #[proc_macro_error]
-#[proc_macro_attribute]
-pub fn proc_macro(args: TokenStream, input: TokenStream) -> TokenStream {
-    proc_macro_impl(args.into(), input.into()).into()
+#[proc_macro]
+pub fn proc_macro(args: TokenStream) -> TokenStream {
+    proc_macro_impl(args.into()).into()
 }
